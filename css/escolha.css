@@ -1,3 +1,50 @@
+:root {
+    --white: #FAFAFA;
+    --grey: #EEE;
+    --dark-grey: #9D9D9D;
+    --pink: #EB6AAF;
+    --blue: #6A77EB;
+    --black: #1A1A1A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #EB6AAF;
+    background-color: var(--pink);
+    display: flex;
+    margin: 10px;
+}
+
+#question{
+    color: var(--white);
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 30px;
+}
+
+#money, #outros{
+    background-color:var(--white);
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 20px;
+    font-family: 'Inter';
+    border: none;
+    border-radius: 15px;
+}
+
+h6{
+    color: var(--white);
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 15px;
 }

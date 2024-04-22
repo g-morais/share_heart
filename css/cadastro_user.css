@@ -1,0 +1,81 @@
+:root {
+    --white: #FAFAFA;
+    --grey: #EEE;
+    --dark-grey: #9D9D9D;
+    --pink: #EB6AAF;
+    --blue: #6A77EB;
+    --black: #1A1A1A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--blue) 50%, var(--white) 50%); 
+}
+
+.outer-container {
+    background-color: var(--white);
+    margin: 50px 24px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid var(--black);
+}
+
+.container {
+    padding: 50px 10px 10px 10px; 
+}
+
+.container form {
+    max-width: 100%; 
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.container button {
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 20px 45px;
+    margin-left: 20%;
+}
+
+@media screen and (min-width: 600px) {
+    .outer-container {
+        margin: 20px auto; 
+        max-width: 600px; 
+    }
+}
+
+#senha {
+    margin-bottom: 80px;
+}
+
+  .bi-person-circle {
+    display: block;
+    margin: 0 auto;
+}
