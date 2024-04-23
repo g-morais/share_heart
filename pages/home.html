@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShareHeart | Home</title>
     <link rel="stylesheet" href="../css/home.css">
+    <script type="module" src="../index.js"></script>
 </head>
 <body>
     <header>
@@ -32,6 +33,10 @@
             </a>
         </div>
     </header>
+
+    <div class="map-wrapper">
+        <div id="map"></div>
+    </div>
 
     <nav>
         <div class="nav-links">
@@ -61,5 +66,8 @@
             </div>
         </div>
     </nav>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdL8itaJjDMTIpsUqAIUo3qsJrw7Ns14Q&callback=initMap">
+</script>
 </body>
 </html>
