@@ -19,10 +19,10 @@
 }
 
 body {
-    background-color: var(--blue);
+    background-color: var(--pink);
     font-family: 'Inter', sans-serif;
     height: 100vh;
-    background: linear-gradient(to bottom, var(--blue) 60%, var(--white) 40%); 
+    background: linear-gradient(to bottom, var(--pink) 60%, var(--white) 40%); 
 }
 
 .outer-container {
@@ -30,7 +30,6 @@ body {
     margin: 120px 24px;
     padding: 30px;
     border-radius: 15px;
-    border: 2px var(--black);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -56,7 +55,7 @@ body {
 }
 
 .container button {
-    background-color: var(--blue);
+    background-color: var(--pink);
     color: white;
     font-weight: bold;
     font-size: 13px;

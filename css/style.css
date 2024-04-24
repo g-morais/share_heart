@@ -1,70 +1,116 @@
 :root {
-    --white: #FAFAFA;
-    --grey: #EEE;
-    --dark-grey: #9D9D9D;
-    --pink: #EB6AAF;
-    --blue: #6A77EB;
-    --black: #1A1A1A;
-}
-@font-face {
-    font-family: 'Inter';
-    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
-}
-
-*{
+    --white: #fafafa;
+    --grey: #eee;
+    --dark-grey: #9d9d9d;
+    --pink: #eb6aaf;
+    --blue: #6a77eb;
+    --black: #1a1a1a;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     background-color: var(--blue);
-}
-
-.container{
-    text-align: center;
-    margin-top: 50px;
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--blue) 50%, var(--white) 50%);
+  }
+  
+  .outer-container {
+    background-color: var(--white);
+    margin: 50px 24px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .container {
+    padding: 0px 10px 10px 10px;
+  }
+  
+  .container form {
+    max-width: 100%;
+  }
+  
+  .container label {
     display: block;
-    margin: 100px;
-}
-
-#username , #password{
-    padding: 15px;
-    border: var(--blue);
-    font-family: 'Inter';
+    margin-bottom: 5px;
+   
+  }
+  
+  .container input {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
-}
-
-#forgotpassword{
-    color: black;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+  }
+  
+  .link {
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    font-size: 0.7rem;
+    color: #1a1a1a;
     font-weight: bold;
-    font-family: 'Inter';
-    text-align: right;
-    padding: 15px;
-}
+  }
 
-#textinho{
-    color: black;
+  .container-button .button1 {
+    width: 100%;
+    margin-top: 20px; 
+    background-color: var(--blue);
+    color: white;
     font-weight: bold;
-    font-family: 'Inter';
-}
-
-#cadastro{
-    padding: 15px;
-    border-radius: 10px;
+    font-size: 14px;
     border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-block: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .container-button .button2 {
+    width: 100%;
     background-color: var(--pink);
-    color: var(--white);
-    font-weight: bolder;
-    font-family: 'Inter';
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-block: 15px;
+    text-align: center;
+   
+  }
+
+.container-icons img {
+  background-color: #6a77eb;
+  padding: 15px;
+  border-radius: 30px;
 }
 
-#entrar{
-    padding: 15px;
-    border-radius: 10px;
-    background-color:var(--blue);
-    color: var(--white);
-    font-family: 'Inter';
-    
-}
-
+  .container-button {
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .outer-container {
+      margin: 20px auto;
+      max-width: 600px;
+    }
+  }
+  
+  .bi-person-circle {
+    display: block;
+    margin: 0 auto;
+  }
