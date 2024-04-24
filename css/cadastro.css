@@ -22,7 +22,7 @@
     background-color: var(--blue);
     font-family: "Inter", sans-serif;
     height: 100vh;
-    background: linear-gradient(to bottom, var(--blue) 50%, var(--white) 50%);
+    background: var(--blue);
   }
   
   .outer-container {
@@ -93,11 +93,6 @@
    
   }
 
-.container-button a{
-  text-decoration: none;
-  color: var(--white);
-}
-
 .container-icons img {
   background-color: #6a77eb;
   padding: 8px;
@@ -125,6 +120,22 @@ p{
 
 form input:focus{
   outline-color: var(--pink);
+}
+
+#pergunta{
+    color: var(--blue);
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#ou{
+    font-size: 10px;
+}
+
+.container-button a{
+    text-decoration: none;
+    color: var(--white);
 }
 
   @media screen and (min-width: 600px) {
