@@ -22,7 +22,7 @@ body {
     width: 100%;
     height: 100vh;
 
-    background-color: #CCC;
+    background-color: #ffffff;
 }
 
 header {
@@ -59,6 +59,12 @@ header {
     font-family: 'Inter';
 }
 
+#text-soph{
+    text-align: right;
+
+}
+
+
 .text h1 {
     font-size: 1.5em;
     font-weight: 600;
@@ -73,20 +79,63 @@ header {
 }
 .outer-text {
     font-family: 'Inter';
-    margin-top: 200px;
+    margin-top: 170px;
+    padding: 10px;
     color: #444444;
     font-weight:600;
     text-align: left;
     margin-left: 20px;
 }
 
+.feed-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img-inst{
+    width: 40%;
+    border-radius: 5px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo do texto */
+    padding: 10px; /* Espaçamento interno do texto */
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+.feed-img {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
+}
+.img-inst {
+    max-width: 100%; 
+}
+
+
+
 @media (min-width: 768px) {
     body {
         padding-top: 80px; 
         font-size: 30px;
+
         
     }
     img {
         width: 100px; 
-        height: 100px; 
+        height: 500px; 
     }
+}
