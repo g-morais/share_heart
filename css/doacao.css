@@ -1,0 +1,173 @@
+:root {
+    --white: #FAFAFA;
+    --grey: #EEE;
+    --dark-grey: #9D9D9D;
+    --pink: #EB6AAF;
+    --blue: #6A77EB;
+    --black: #1A1A1A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--white);
+}
+
+/* Slide */
+
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 262px;
+    background: rgb(60,60,60);
+    background: linear-gradient(180deg, rgba(60,60,60,0.41228991596638653) 0%, rgba(0,0,0,0.5579481792717087) 100%);
+}
+
+.slider{
+    width: 100%;
+    height: 262px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 170px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide-img {
+    width: 100%;
+    height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-1{
+    background-image: url(../assets/img/cruz-vermelha-pic.png);
+}
+
+.img-2 {
+    background-image: url(../assets/img/cruz-vermelha-pic.png);
+}
+
+.img-3 {
+    background-image: url(../assets/img/cruz-vermelha-pic.png);
+}
+
+.img-4 {
+    background-image: url(../assets/img/cruz-vermelha-pic.png);
+}
+
+
+.manual-navigation{
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 1px solid var(--pink);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 25px;
+}
+
+.manual-btn:hover{
+    background-color: var(--pink);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;  
+}
+
+
+.navigation-auto div {
+    border: 1px solid var(--pink);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 290px;
+    display: flex;  
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 25px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: var(--pink);
+}
+
+/* Fim do Slide */
+
+.logo {
+    position: absolute;
+    top: 215px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    background-image: url(../assets/img/cruz-vermelha-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16.92px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
