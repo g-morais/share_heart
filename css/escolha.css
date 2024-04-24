@@ -19,32 +19,45 @@
 }
 
 body {
-    background-color: var(--pink);
+    background: var(--blue);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.img{
     display: flex;
-    margin: 10px;
+    margin-left: 130px;
+    margin-top: 100px;
 }
 
-#question{
+h2{
     color: var(--white);
-    font-family: 'Inter';
-    font-weight: 500;
-    font-size: 30px;
-}
-
-#money, #outros{
-    background-color:var(--white);
-    color: black;
     font-weight: bolder;
-    font-size: 16px;
-    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 35px;
     font-family: 'Inter';
-    border: none;
-    border-radius: 15px;
+    margin-top: 30px;
 }
 
-h6{
-    color: var(--white);
+button{
+    background-color: var(--white);
+    color: var(--black);
+    padding: 20px;
+    border-radius: 10px;
     font-family: 'Inter';
-    font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
+    border: 1px solid black;
+    margin-top: 25px;
+    font-weight: 600;
+    
 }
+
+.opcoes{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+

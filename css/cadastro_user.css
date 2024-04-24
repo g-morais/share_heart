@@ -67,6 +67,11 @@ body {
     margin-left: 25%;
 }
 
+.container button a{
+    text-decoration: none;
+    color: var(--white);
+}
+
 @media screen and (min-width: 600px) {
     .outer-container {
         margin: 20px auto; 
