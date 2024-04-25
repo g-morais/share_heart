@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6a77eb">
     <title>ShareHeart | Login</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -42,6 +43,11 @@
             </form>
         </div>
     </div>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+        }
+    </script>
 </body>
 
 </html>
