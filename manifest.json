@@ -450,12 +450,12 @@
         },
         {
           "src": "ios/192.png",
-          "sizes": "192x192",
-          "purpose": "any maskable"
+          "sizes": "192x192"
         },
         {
           "src": "ios/256.png",
-          "sizes": "256x256"
+          "sizes": "256x256",
+          "purpose": "any maskable"
         },
         {
           "src": "ios/512.png",
