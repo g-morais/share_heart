@@ -28,19 +28,22 @@ if (workbox.navigationPreload.isSupported()) {
 }
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
+  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/css'))) {
     event.respondWith((async () => {
       try {
-        const preloadResp = await event.preloadResponse;
+        const cache = await caches.open(CACHE);
+        const cachedResp = await cache.match(event.request);
 
-        if (preloadResp) {
-          return preloadResp;
+        if (cachedResp) {
+          return cachedResp;
         }
 
         const networkResp = await fetch(event.request);
+        if (networkResp.ok && event.request.method === 'GET' && event.request.headers.get('accept').includes('text/css')) {
+          await cache.put(event.request, networkResp.clone());
+        }
         return networkResp;
       } catch (error) {
-
         const cache = await caches.open(CACHE);
         const cachedResp = await cache.match(offlineFallbackPage);
         return cachedResp;
