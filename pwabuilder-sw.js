@@ -6,6 +6,7 @@ const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = "offline.html";
+const offlineFallbackCss = "css/offline.css";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -16,34 +17,32 @@ self.addEventListener("message", (event) => {
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      .then((cache) => {
-        cache.add(offlineFallbackPage);
-        cache.add('css/offline.css'); // Pré-cache do arquivo de estilo
+      .then(async (cache) => {
+        await cache.add(offlineFallbackPage);
+        await cache.add('css/offline.css');
       })
   );
 });
+
 
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
 }
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/css'))) {
+  if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
       try {
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(event.request);
+        const preloadResp = await event.preloadResponse;
 
-        if (cachedResp) {
-          return cachedResp;
+        if (preloadResp) {
+          return preloadResp;
         }
 
         const networkResp = await fetch(event.request);
-        if (networkResp.ok && event.request.method === 'GET' && event.request.headers.get('accept').includes('text/css')) {
-          await cache.put(event.request, networkResp.clone());
-        }
         return networkResp;
       } catch (error) {
+
         const cache = await caches.open(CACHE);
         const cachedResp = await cache.match(offlineFallbackPage);
         return cachedResp;
