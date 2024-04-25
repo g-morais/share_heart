@@ -3,10 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/pagamento.css">
+    <title>ShareHeart | Home</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
+    <header>
+        <div class="header1">
+            <div class="profile">
+                <a href="#">
+                    <img src="img/profile-pic.svg" alt="Sophia Albuquerque">
+                </a>
+            </div>
+            <div class="header-text">
+                <h1>Olá, Sophia!</h1>
+                <h3>Gostaria de realizar uma doação em dinheiro hoje?</h3>
+            </div>
+        
+        
+    </div>
+        <div class="balance">
+            <div class="saldo-wrapper">
+                <span class="saldo-label">Saldo:</span>
+                <span class="saldo-valor">R$ 10,00</span> <!-- Valor do saldo (pode ser dinâmico) -->
+            </div>
+            <button class="mostrar-saldo" onclick="toggleSaldo()"> <!-- Botão para mostrar/ocultar saldo -->
+                <img src="img/visibilidade.png" alt="Ícone de olho">
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<main>
+ 
+    <div class="pix-container">
+        <h3>O que deseja fazer?</h3>
+        <p class="donation-text">
+            Ao doar, você oferece esperança e oportunidade a quem mais precisa. Cada gesto de generosidade conta e faz diferença. Juntos, podemos construir um futuro mais inclusivo e sustentável para todos.
+        </p>
+        <div class="button-container">
+            <button class="pix-button">
+                <img src="img/deposito.png" alt="Ícone PIX">
+                Adicionar Saldo
+            </button>
+            <button class="pix-button add-money-button">
+                <img src="img/icons8-iniciar-transferência-de-dinheiro-48.png" alt="Ícone dinheiro">
+                Realizar transferência
+            </button>
+        </div>
+    </div>
     
+    
+    
+    <div class="transactions-container">
+        <h2>Histórico</h2>
+        <ul class="transaction-list">
+            <li class="transaction">
+                <div class="action-icon">
+                    <img src="img/doacao.png" alt="Ícone de saída">
+                </div>
+                <div class="transaction-details">
+                    <span class="transaction-recipient">Criança Esperança</span>
+                    <span class="transaction-type">Doação realizada</span>
+                    <span class="transaction-amount">- R$ 15,00</span>
+                    <span class="transaction-date">Hoje</span>
+                </div>
+            </li>
+            
+            <li class="transaction">
+                <div class="action-icon">
+                    <img src="img/doacao.png" alt="Ícone de saída">
+                </div>
+                <div class="transaction-details">
+                    <span class="transaction-recipient">Cruz Vermelha</span>
+                    <span class="transaction-type">Doação realizada</span>
+                    <span class="transaction-amount">- R$ 15,00</span>
+                    <span class="transaction-date">Hoje</span>
+                </div>
+            </li>
+            <li class="transaction">
+                <div class="action-icon">
+                    <img src="img/caixa-de-deposito.png" alt="Ícone de entrada">
+                </div>
+                <div class="transaction-details">
+                    <span class="transaction-recipient">Depósito realizado</span>
+                    <span class="transaction-type">Entrada de dinheiro</span>
+                    <span class="transaction-amount">+ R$ 10,00</span>
+                    <span class="transaction-date">18 Fev</span>
+                </div>
+            </li>
+            <li class="transaction">
+                <div class="action-icon">
+                    <img src="img/doacao.png" alt="Ícone de saída">
+                </div>
+                <div class="transaction-details">
+                    <span class="transaction-recipient">Criança Esperança</span>
+                    <span class="transaction-type">Doação realizada</span>
+                    <span class="transaction-amount">- R$ 50,00</span>
+                    <span class="transaction-date">14 Fev</span>
+                </div>
+            </li>
+            <li class="transaction">
+                <div class="action-icon">
+                    <img src="img/doacao.png" alt="Ícone de saída">
+                </div>
+                <div class="transaction-details">
+                    <span class="transaction-recipient">Médicos Sem Fronteiras</span>
+                    <span class="transaction-type">Doação realizada</span>
+                    <span class="transaction-amount">- R$ 20,00</span>
+                    <span class="transaction-date">31 Jan</span>
+                </div>
+            </li>
+            <li class="transaction">
+                <div class="action-icon">
+                    <img src="img/doacao.png" alt="Ícone de saída">
+                </div>
+                <div class="transaction-details">
+                    <span class="transaction-recipient">UNICEF</span>
+                    <span class="transaction-type">Doação realizada</span>
+                    <span class="transaction-amount">- R$ 7,00</span>
+                    <span class="transaction-date">18 Jan</span>
+                </div>
+            </li>
+           
+        </ul>
+    </div>
+    
+</main>
+   
 </body>
 </html>
