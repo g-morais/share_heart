@@ -238,6 +238,15 @@ main .posts .post .post-bottom p {
     font-weight: 500;
 }
 
+.postar-btn {
+    width: 53px;
+    height: 53px;
+
+    position: fixed;
+    bottom: 130px;
+    right: 30px;
+}
+
 /* Barra de navegação */
 
 nav {
