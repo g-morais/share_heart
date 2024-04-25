@@ -10,6 +10,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -34.397, lng: 150.644 },
     zoom: 15,
+    disableDefaultUI: true,
   });
   infoWindow = new google.maps.InfoWindow();
 
@@ -55,7 +56,7 @@ function initMap() {
               // Adiciona um evento de clique para mostrar as informações do local
               marker.addListener("click", function () {
                 infoWindow.setContent(
-                  "<h3>" + nome + "</h3><p>" + endereco + "</p><a href='" + href +".html' >Ver perfil</a>"
+                  "<h3>" + nome + "</h3><p>" + endereco + "</p><a style='outline: none;' href='" + href +".html' >Ver perfil</a>"
                 );
                 infoWindow.open(map, marker);
               });
