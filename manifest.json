@@ -438,8 +438,7 @@
         },
         {
           "src": "ios/152.png",
-          "sizes": "152x152",
-          "purpose": "any maskable"
+          "sizes": "152x152"
         },
         {
           "src": "ios/167.png",
@@ -451,7 +450,8 @@
         },
         {
           "src": "ios/192.png",
-          "sizes": "192x192"
+          "sizes": "192x192",
+          "purpose": "any maskable"
         },
         {
           "src": "ios/256.png",
