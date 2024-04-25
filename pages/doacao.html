@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShareHeart | Doação</title>
-    <link rel="stylesheet" href="../css/doacao.css">
-</head>
-<body>
-    <div class="slider">
-        <div class="slides">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShareHeart | Doação</title>
+        <link rel="stylesheet" href="../css/doacao.css">
+    </head>
+    <body>
+        <div class="body-page">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
 
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
+                    <div class="slide first">
+                        <div class="slide-img img-1"></div>
+                        <div class="fade"></div>
+                    </div>
 
-            
-            <div class="slide first">
-                <div class="slide-img img-1"></div>
-                <div class="fade"></div>
+                    <div class="slide">
+                        <div class="slide-img img-2"></div>
+                        <div class="fade"></div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-img img-3"></div>
+                        <div class="fade"></div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-img img-4"></div>
+                        <div class="fade"></div>
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn 1"></label>
+                    <label for="radio2" class="manual-btn 2"></label>
+                    <label for="radio3" class="manual-btn 3"></label>
+                    <label for="radio4" class="manual-btn 4"></label>
+                </div>
+
+                <div class="logo"></div>
             </div>
 
-            <div class="slide">
-                <div class="slide-img img-2"></div>
-                <div class="fade"></div>
-            </div> 
-
-            <div class="slide">
-                <div class="slide-img img-3"></div>
-                <div class="fade"></div>
-            </div> 
-
-            <div class="slide">
-                <div class="slide-img img-4"></div>
-                <div class="fade"></div>
-            </div> 
-
-
-
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-
+            <section>
+                <h1 class="title">Cruz Vermelha Brasileira</h1>
+                <div class="secao-principal">
+                    <div class="card">
+                        <p class="card-title">História</p>
+                        <p class="card-description">
+                            A Cruz Vermelha originou-se da iniciativa de um homem chamado Henry Dunant, que ajudou os soldados feridos na batalha de Solferino, em 1859, 
+                            e depois fez um lobby junto aos líderes políticos para adotarem mais medidas de proteção das vítimas da guerra.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p class="card-title">Média de Doações</p>
+                        <img class="card-img" src="../assets/img/grafico.svg" />
+                    </div>
+                    <div class="container">
+                        <button style="box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.2);">Fazer doação</button>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div class="manual-navigation">
-            <label for="radio1" class="manual-btn 1"></label>
-            <label for="radio2" class="manual-btn 2"></label>
-            <label for="radio3" class="manual-btn 3"></label>
-            <label for="radio4" class="manual-btn 4"></label>
-        </div>
-
-        <div class="logo"></div>
-        
-    </div>
-</body>
+    </body>
 </html>
