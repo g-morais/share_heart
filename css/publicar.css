@@ -1,0 +1,140 @@
+:root {
+    --white: #FAFAFA;
+    --grey: #EEE;
+    --dark-grey: #9D9D9D;
+    --pink: #EB6AAF;
+    --blue: #6A77EB;
+    --black: #1A1A1A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--white);
+}
+
+header {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 120px;
+}
+
+.photo-field, .subtitle-field {
+    width: 100%;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.photo-field .photo-field-text, .subtitle-field .subtitle-field-text {
+    text-align: left;
+}
+
+.photo-field .photo-field-text h1, .subtitle-field .subtitle-field-text h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.photo-field .photo-field-text h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--pink);
+}
+
+.subtitle-field .subtitle-field-text h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.photo-field .photo {
+    width: 100%;
+    max-width: 500px;
+    height: 230px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid var(--dark-grey);
+}
+
+.subtitle-field .subtitle {
+    width: 100%;
+}
+
+.subtitle-field .subtitle textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--dark-grey);
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.subtitle-field .subtitle textarea::placeholder {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--dark-grey);
+}
+
+.subtitle-field .subtitle textarea:focus {
+    outline: 1px solid var(--pink);
+    border: none;
+}
+
+.publicar-btn {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+}
+
+.publicar-btn a {
+    padding-block: 15px;
+    padding-inline: 30px;
+
+    font-size: 1em;
+    font-weight: 800;
+
+    background-color: var(--pink);
+    color: var(--white);
+
+    border-radius: 25px;
+    
+    text-align: center;
+    text-decoration: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.photo #preview {
+    width: 100%;
+    max-height: 230px;
+}

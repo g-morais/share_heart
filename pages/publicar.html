@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar | ShareHeart</title>
+    <link rel="stylesheet" href="../css/publicar.css">
+</head>
+<body>
+    <header>
+        <a href="./comunidade.html">
+            <img src="../assets/img/voltar-icon.svg" alt="Voltar">
+        </a>
+    </header>
+    <main>
+        <div class="fields">
+            <div class="photo-field">
+                <div class="photo-field-text">
+                    <h1>Escolha uma foto</h1>
+                    <h3>da sua galeria</h3>
+                </div>
+                <div class="photo" id="photo">
+                    <form action="">
+                        <label for="arquivo"><img id="arquivo-img" src="../assets/img/add-photo-icon.svg" alt="Adicionar foto"></label>
+                        <input type=file name="arquivo" id="arquivo">
+                        <img id="preview" src=""/>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="subtitle-field">
+                <div class="subtitle-field-text">
+                    <h1>Adicione uma</h1>
+                    <h3>legenda</h3>
+                </div>
+                <div class="subtitle">
+                    <textarea name="legenda" id="legenda" cols="30" rows="5" placeholder="Mensagem..." wrap="hard"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="publicar-btn">
+            <a href="./comunidade.html">Publicar</a>
+        </div>
+    </main>
+
+    <script src="../scripts/preview.js"></script>
+</body>
+</html>
