@@ -1,0 +1,258 @@
+:root {
+    --white: #FAFAFA;
+    --grey: #EEE;
+    --dark-grey: #9D9D9D;
+    --pink: #EB6AAF;
+    --blue: #6A77EB;
+    --black: #1A1A1A;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--white);
+}
+
+/* Início da header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #FAFAFA;
+    
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    box-shadow: 0px -1px 10px 2px rgba(157.25, 157.25, 157.25, 0.50);
+
+    z-index: 999;
+}
+
+.header-top, .header-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar-wrapper {
+    width: 58.14%;
+    min-width: 250px;
+    max-width: 400px;
+    height: 40px;
+    padding-inline: 30px;
+    position: relative;
+}
+
+.searchbar-wrapper img {
+    width: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20px;
+}
+
+.searchbar {
+    width: 100%;
+    height: 40px;
+    padding-inline: 45px;
+
+    border: none;
+    border-radius: 20px;
+    
+
+    background-color: #EEE;
+}
+
+.searchbar::placeholder {
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #9D9D9D;
+}
+
+.searchbar:focus {
+    outline: 1px solid var(--pink);
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey);
+    border-radius: 20px;
+}
+
+.text {
+    font-family: 'Inter';
+}
+
+.text h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.text p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #616161;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Fim da header */
+
+/* .outer-text {
+    font-family: 'Inter';
+    margin-top: 170px;
+    padding: 10px;
+    color: #444444;
+    font-weight:600;
+    text-align: left;
+    margin-left: 20px;
+} */
+
+/* .feed-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img-inst{
+    width: 40%;
+    border-radius: 5px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo do texto */
+    /* padding: 10px; /* Espaçamento interno do texto 
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+.feed-img {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; 
+}
+.img-inst {
+    max-width: 100%; 
+}  */
+
+/* Comunidade Principal */
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 153px;
+    left: 0;
+}
+
+main .posts {
+    width: 100%;
+}
+
+
+/* Barra de navegação */
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    box-shadow: 0px -1px 10px 2px rgba(157.25, 157.25, 157.25, 0.50);
+    
+    background-color: var(--white);
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links .link {
+    font-family: 'Inter';
+    font-size: 1em;
+}
+
+.nav-links .active a{
+    color: var(--pink) !important;
+}
+
+.nav-links .link a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* Fim de barra de navegação */
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 80px; 
+        font-size: 30px;
+
+        
+    }
+    img {
+        width: 100px; 
+        height: 500px; 
+    }
+}

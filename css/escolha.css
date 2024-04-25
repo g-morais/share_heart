@@ -49,7 +49,7 @@ button{
     font-family: 'Inter';
     font-size: 20px;
     border: 1px solid black;
-    margin-top: 25px;
+    margin-top: 20px;
     font-weight: 600;
     
 }
@@ -61,3 +61,52 @@ button{
     padding: 60px;
 }
 
+/* Barra de navegação */
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    box-shadow: 0px -1px 10px 2px rgba(157.25, 157.25, 157.25, 0.50);
+    
+    background-color: var(--white);
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links .link {
+    font-family: 'Inter';
+    font-size: 1em;
+}
+
+.nav-links .active a{
+    color: var(--pink) !important;
+}
+
+.nav-links .link a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* Fim de barra de navegação */
