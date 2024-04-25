@@ -12,259 +12,108 @@
     src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--blue);
+    background: var(--blue);
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-.body-page{
+header {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    color: var(--white);
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-top: 30px;
+}
+
+button{
+    background-color: var(--white);
+    color: var(--black);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-size: 20px;
+    border: 1px solid black;
+    margin-top: 20px;
+    font-weight: 600;
+    
+}
+
+.opcoes{
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    padding: 60px;
 }
 
-.title{
-    color:white;
-    width: 90%;
-    margin-inline:auto;
-    text-align: start;
-    margin-bottom: 30px;
+/* Barra de navegação */
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    box-shadow: 0px -1px 10px 2px rgba(157.25, 157.25, 157.25, 0.50);
+    
+    background-color: var(--white);
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links .link {
     font-family: 'Inter';
+    font-size: 1em;
 }
 
-.secao-principal {
+.nav-links .active a{
+    color: var(--pink) !important;
+}
+
+.nav-links .link a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-
-.secao-principal .card{
-    width: 90%;
-    height: auto;
-    border-radius:10px;
-    padding: 10px;
-    background-color: #d9d9d9;
-    -webkit-box-shadow: 10px 5px 30px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 5px 30px -6px rgba(0,0,0,0.75);
-    box-shadow: 10px 5px 30px -6px rgba(0,0,0,0.75);
-}
-
-.secao-principal .card .card-title{
-    margin-bottom: 25px;
-    font-family: 'Inter';
-}
-
-.secao-principal .card .card-description{
-    text-wrap: wrap;
-    text-align: start;
-    font-family: 'Inter';
-    word-break: break-all;
-}
-
-.secao-principal .card .card-title + * {
-    padding-inline:15px;
-    text-align: start;
-    margin:auto;
-}
-
-.secao-principal .card .card-img {
-    width:300px;
-    margin:auto;
-}
-
-.container{
-    position:relative;
-}
-
-.container button {
-    background-color: var(--pink);
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    border: none;
-    border-radius: 13px;
-    margin-top: 5px;
-    cursor: pointer;
-    padding: 15px 100px;
-    border-radius: 20px;
-   
-}
-
-.container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 22px;
-    border-radius: 7px; 
-    border: 1px solid black;
-}
-
-.container label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-
-/* Slide */
-.fade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 262px;
-    background: rgb(60,60,60);
-    background: linear-gradient(180deg, rgba(60,60,60,0.41228991596638653) 0%, rgba(0,0,0,0.5579481792717087) 100%);
-}
-
-.slider{
-    width: 100%;
-    height: 262px;
-    overflow: hidden;
-}
-
-.slides{
-    width: 500%;
-    height: 170px;
-    display: flex;
-}
-
-.slides input{
-    display: none;
-}
-
-.slide{
-    width: 20%;
-    position: relative;
-    transition: 2s;
-}
-
-.slide-img {
-    width: 100%;
-    height: 580px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.img-1{
-    background-image: url(../assets/img/cruz-vermelha-pic.png);
-}
-
-.img-2 {
-    background-image: url(../assets/img/cruz_vermelha_4.jpg);
-}
-
-.img-3 {
-    background-image: url(../assets/img/cruz-vermelha-logo.png);
-    width: 420px;
-    height: 300px;
-}
-
-.img-4 {
-    background-image: url(../assets/img/cruz-vermelha-pic.png);
-}
-
-
-.manual-navigation{
-    position: absolute;
-    width: 100px;
-    left: 50%;
-    margin-left: -50px;
-    margin-top: 120px;
-    display: flex;
     justify-content: center;
+    color: var(--blue);
+    text-decoration: none;
 }
 
-.manual-btn{
-    border: 1px solid var(--pink);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.manual-btn:not(:last-child){
-    margin-right: 25px;
-}
-
-.manual-btn:hover{
-    background-color: var(--pink);
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -20%;
-}
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-    margin-left: -60%;  
-}
-
-
-.navigation-auto div {
-    border: 1px solid var(--pink);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.navigation-auto {
-    position: absolute;
-    width: 100px;
-    left: 50%;
-    margin-left: -50px;
-    margin-top: 290px;
-    display: flex;  
-    justify-content: center;
-}
-
-.navigation-auto div:not(:last-child) {
-    margin-right: 25px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1,
-#radio2:checked ~ .navigation-auto .auto-btn2,
-#radio3:checked ~ .navigation-auto .auto-btn3,
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-    background-color: var(--pink);
-}
-
-/* Fim do Slide */
-
-.logo {
-    position: absolute;
-    top: 215px;
-    left: 30px;
-    width: 90px;
-    height: 90px;
-    background-image: url(../assets/img/cruz-vermelha-logo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 16.92px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (min-width: 601px) {
-    * {
-        font-size: 30px; 
-    }
-    img {
-        width: 1200px !important;
-        height: 600px !important;
-    }
-}
+/* Fim de barra de navegação */

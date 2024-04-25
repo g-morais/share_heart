@@ -41,6 +41,7 @@ function initMap() {
               const lat = item.latitude;
               const lng = item.longitude;
               const endereco = item.endereco;
+              const href = item.href;
               const latLng = new google.maps.LatLng(lat, lng);
 
               const marker = new google.maps.Marker({
@@ -54,7 +55,7 @@ function initMap() {
               // Adiciona um evento de clique para mostrar as informações do local
               marker.addListener("click", function () {
                 infoWindow.setContent(
-                  "<h3>" + nome + "</h3><p>" + endereco + "</p>"
+                  "<h3>" + nome + "</h3><p>" + endereco + "</p><a href='" + href +".html' >Ver perfil</a>"
                 );
                 infoWindow.open(map, marker);
               });
