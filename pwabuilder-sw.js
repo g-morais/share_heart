@@ -6,7 +6,6 @@ const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = "offline.html";
-const offlineFallbackCss = "css/offline.css";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -17,13 +16,9 @@ self.addEventListener("message", (event) => {
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      .then(async (cache) => {
-        await cache.add(offlineFallbackPage);
-        await cache.add('css/offline.css');
-      })
+      .then((cache) => cache.add(offlineFallbackPage))
   );
 });
-
 
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
