@@ -68,6 +68,19 @@ button{
     padding: 60px;
 }
 
+.opcoes-btn {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
 /* Barra de navegação */
 
 nav {
