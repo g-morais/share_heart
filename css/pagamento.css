@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter';
 }
 
 body {
@@ -26,23 +27,26 @@ body {
 }
 
 header {
-    
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 90px; /* Ajuste o padding-top conforme necessário */
-    padding-left: 5%;
-    padding-bottom: 5%;
+    padding-block: 20px;
+    padding-inline: 7%;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     background-color: #6A77EB;
+    
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
-    box-shadow: 0px -1px 10px 2px rgba(157, 157, 157, 0.50);
+
+    box-shadow: 0px -1px 10px 2px rgba(157.25, 157.25, 157.25, 0.50);
+
     z-index: 999;
-  }
+}
+
 
 
   .header1 {
@@ -63,7 +67,11 @@ header {
 .header-text {
     font-size: 15px; /* Tamanho do texto */
     margin-left: 15px; /* Margem à esquerda para separar o texto do ícone */
-    color: white;
+    color: var(--white);
+}
+
+.header-text p {
+    color: var(--grey);
 }
 
 
@@ -72,30 +80,30 @@ header {
     width: 60%;
     height: 60px;
     border-radius: 30px;
-    background-color: #444D99;
-    color: white;
+    background-color: var(--pink);
+    color: var(--white);
     font-size: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin: auto; 
     position: relative; 
   }
   
   .saldo-wrapper {
     display: flex;
+    justify-content: space-between;
+    gap: 10px;
     align-items: center;
   }
   
-  .saldo-label {
-    margin-right: 30px; 
-  }
-  
   .mostrar-saldo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
-    height: autoS;
+    height: auto;
     background: none;
     border: none;
     cursor: pointer;
@@ -105,10 +113,6 @@ header {
     width: 24px;
     height: auto;
     
-  }
-  
-  .saldo-valor {
-    display: block;
   }
   
   .saldo-valor.oculto {
@@ -213,11 +217,15 @@ h2:after {
 
 
 .pix-container {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     width: 100%; /* Preenche toda a largura disponível */
     max-width: auto;
     text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.pix-container h3 {
+    color: var(--pink);
 }
 
 .button-container {
@@ -260,4 +268,8 @@ h2:after {
     text-align:center;
     line-height: 1.6;
     font-family: 'Inter', Arial, sans-serif; /* Defina a fonte desejada */
+}
+
+.transactions-container h2, .transactions-container span {
+    color: var(--black);
 }
