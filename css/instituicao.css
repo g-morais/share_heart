@@ -53,7 +53,7 @@ header {
     gap: 20px;
 }
 
-.sobre {
+.sobre, .endereco {
     width: 100%;
     padding-inline: 30px;
     display: flex;
@@ -61,14 +61,14 @@ header {
     gap: 10px;
 }
 
-.sobre h3 {
+.sobre h3, .endereco h3 {
     color: var(--pink);
 }
 
 .container {
     position: fixed;
     bottom: 60px;
-    right: 30px;
+    margin: 0 auto;
 }
 
 .container a {
